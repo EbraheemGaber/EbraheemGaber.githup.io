@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gallery{
+            display: block;
+            margin: auto;
+            width: 900px;
+            background-image: linear-gradient(red,blue);
+        }
+        
+            .center{
+                margin:50px;
+                display: flex;
+                justify-content: center;
+            }
+        
+        .center img{
+            width:50%;
+            height: 200px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+    <div>
+        <img  class="first"src="images (1).jpeg">
+        <img src="images (1).png">
+        <img src="images (2).jpeg">
+        <img src="images (2).png">
+    </div>
+    <div class="center">
+        <img src="" class="main">
+    </div>
+      <div>
+        <img src="images.png" style="height: 200px; width: 250px;">
+        <img src="images.jpeg">
+        <img src="images (5).jpeg">
+        <img src="images (4).jpeg">
+    </div>
+</div>
+
+<script>
+const images = document.querySelectorAll("img");
+const main =document.querySelector(".main")
+
+// Loop through the images and attach a click event listener to each one
+images.forEach(image => {
+  image.addEventListener("click", function() {
+    // Log the src attribute of the clicked image to the console
+    main.src=image.src;
+  });
+});
+</script>
+</body>
+</html>
